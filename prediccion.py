@@ -1,5 +1,5 @@
 #cargamos os datos
-import sys
+
 import torch
 import numpy as np
 from torchvision import datasets, transforms
@@ -12,10 +12,7 @@ import os
 from PIL import Image  
 import PIL  
   
-image_path =  sys.argv[1]
-im1 = Image.open(image_path)  
-im2 = im1.save("C:/Users/Sergio/Desktop/TFG/app/targets/imagenes/image.jpg") 
-im3 = im1.save("C:/Users/Sergio/Desktop/TFG/app/public/image.jpg") 
+
 
 
 #rede
@@ -69,7 +66,7 @@ transformar = transforms.Compose([
     ])
 
 
-data_dir="C:/Users/Sergio/Desktop/TFG/app"
+data_dir="your/dir"
 
 images = {x: datasets.ImageFolder(os.path.join(data_dir, x),
                                           transformar)
